@@ -1,0 +1,87 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0A0800;
+}
+
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  z-index: 0;
+}
+
+.bg-video.active {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 8, 0, 0.45) 0%,
+    rgba(10, 8, 0, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+main {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.logo {
+  width: min(520px, 80vw);
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0 32px rgba(245, 176, 0, 0.3));
+}
+
+.ig-link {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #F5B000;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.ig-link:hover {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.12);
+}
+
+.ig-link:focus-visible {
+  opacity: 1;
+  outline: 2px solid #F5B000;
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
+.ig-link svg {
+  width: 2rem;
+  height: 2rem;
+}
