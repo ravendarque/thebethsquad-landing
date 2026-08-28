@@ -89,3 +89,24 @@ main {
   font-size: 1rem;
   letter-spacing: 0.1em;
 }
+
+.quotes-link {
+  color: #F2E9D8;
+  opacity: 0.55;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.quotes-link:hover {
+  opacity: 0.9;
+  transform: translateX(3px);
+}
+
+.quotes-link:focus-visible {
+  opacity: 0.9;
+  outline: 2px solid #F5B000;
+  outline-offset: 6px;
+  border-radius: 4px;
+}
